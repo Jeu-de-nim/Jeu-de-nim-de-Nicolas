@@ -5,10 +5,10 @@ def player_one_turn(N, j1):
     nb_allumettes_joueur = int(input("Combien d'allumettes souhaitez vous retirer ? (entre 1 et 3) : "))
   N = N - nb_allumettes_joueur
   if(N <= 0):
-    print(j1,"Vous avez perdu !")
+    print(j1,"Vous avez gagné !")
     return 0
   elif(N == 1):
-    print(j1,"Vous avez gagné !")
+    print(j1,"Vous avez perdu !")
     return 1
   else:
     return N
@@ -21,10 +21,10 @@ def player_two_turn(N,j2):
     nb_allumettes_joueur = int(input("Combien d'allumettes souhaitez vous retirer ? (entre 1 et 3) : "))
     N = N - nb_allumettes_joueur
     if(N <= 0):
-      print(j2,"Vous avez perdu !")
+      print(j2,"Vous avez gagné !")
       return 0
     elif(N == 1):
-      print(j2,"Vous avez gagné !")
+      print(j2,"Vous avez perdu !")
       return 1
     else:
       return N
@@ -32,8 +32,8 @@ def player_two_turn(N,j2):
 
 def game():
   N = 21
-  j1 = input("entrer le nom du joueur 1")
-  j2 = input("entrer le nom du joueur 2")
+  j1 = input("entrer le nom du joueur 1:")
+  j2 = input("entrer le nom du joueur 2:")
   while(N >= 1):
     print("Allumettes disponibles: " + " | " * N)
     t1 = player_one_turn(N,j1)
