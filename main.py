@@ -38,7 +38,7 @@ def ordinateur_turn(N):
     nb_allumettes_ordinateur = N - 1
     print("Vous avez perdu. L'ordinateur prends {} allumettes.".format(nb_allumettes_ordinateur))
     print("Vous prenez donc forcément la dernière")
-    return N
+    return 1
   else:
     nb_allumettes_ordinateur = N % 6
     if(nb_allumettes_ordinateur == 0):
